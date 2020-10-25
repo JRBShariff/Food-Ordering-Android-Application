@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "289695658767",
+    "firebase_url": "https://mealsordering.firebaseio.com",
+    "project_id": "mealsordering",
+    "storage_bucket": "mealsordering.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289695658767:android:a2e9caef445df7662bc47a",
+        "android_client_info": {
+          "package_name": "com.shariff.mealsordering"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "289695658767-c4e6i2p075ov89ung40bbpmsfon2io30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJv4wrih1tHAdwoR3U0kbsZbEVJJB59PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "289695658767-c4e6i2p075ov89ung40bbpmsfon2io30.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

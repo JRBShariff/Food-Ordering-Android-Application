@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="70dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/logo" />
+                <TextView
+                    android:text="ORDER YOUR"
+                    android:textSize="20sp"
+                    android:textColor="#fd8201"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:text="MEALS NOW"
+                    android:textSize="20sp"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="TODAY'S "
+                    android:textColor="#fd8201"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=" SPECIAL LUNCH"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_height="180dp"
+                app:cardElevation="2dp"
+                android:layout_margin="10dp"
+                app:contentPadding="0dp"
+                app:cardCornerRadius="10dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/m1"
+                    android:layout_height="match_parent">
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="TODAY'S "
+                    android:textColor="#fd8201"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=" SPECIAL BREAKFAST"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="#eee"
+                android:layout_marginBottom="10dp"
+                android:layout_height="180dp"
+                app:cardElevation="2dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/m2"
+                    android:layout_height="match_parent">
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:text="FOOD "
+                    android:textColor="#fd8201"
+                    android:textSize="17sp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=" CATEGORY"
+                    android:textSize="17sp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_height="180dp"
+                app:cardElevation="2dp"
+                android:layout_margin="10dp"
+                app:contentPadding="0dp"
+                app:cardCornerRadius="10dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/m1"
+                    android:layout_height="match_parent">
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
