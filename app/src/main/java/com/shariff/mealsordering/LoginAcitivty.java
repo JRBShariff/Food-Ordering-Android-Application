@@ -36,7 +36,7 @@ public class LoginAcitivty extends AppCompatActivity {
         btn = findViewById(R.id.btn_login);
 
         dialog = new ProgressDialog(this);
-        dialog.setTitle("Saving");
+        dialog.setTitle("Loading");
         dialog.setMessage("Please Wait");
 
 
@@ -74,8 +74,11 @@ public class LoginAcitivty extends AppCompatActivity {
     }
 
 
+    public void resetPassword(View v){
+        startActivity(new Intent(LoginAcitivty.this,PasswordActivity.class));
+    }
 
-    public void Regsitration(View v){
+    public void Registration(View v){
         startActivity(new Intent(LoginAcitivty.this,RegisterActivity.class));
     }
 
