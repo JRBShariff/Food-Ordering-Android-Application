@@ -63,8 +63,7 @@ public class LoginAcitivty extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     dialog.dismiss();
                     if(task.isSuccessful()){
-                        Toast.makeText(LoginAcitivty.this, "Login Succesfull!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginAcitivty.this,HomeActivity.class));
+                        checkEmailVarification();
                     }else{
                         message("Info","Login Failed! Please Enter Correct Details.");
                     }
@@ -91,4 +90,17 @@ public class LoginAcitivty extends AppCompatActivity {
         });
         builder.create().show();
     }
+
+    private void checkEmailVarification(){
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        Boolean emailflag=firebaseUser.isEmailVerified();
+        if(emailflag){
+            finish();
+            startActivity(new Intent(LoginAcitivty.this,HomeActivity.class));
+        }else{
+           message("Info","Please Varify your Email");
+           firebaseAuth.signOut();
+        }
+    }
+
 }

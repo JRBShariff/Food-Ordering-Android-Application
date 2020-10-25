@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -64,8 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             dialog.dismiss();
                             if(task.isSuccessful()){
-                                message("Info","Registration Sucessfull!");
-
+                                sendEmailVarification();
                             }else{
                                 message("Info","Registration Failed!");
                             }
@@ -80,7 +80,24 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
+    private  void sendEmailVarification(){
+        FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
+        if(firebaseUser!=null){
+            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                        message("Info","Successefully Registered and Varification mail Sent!");
+                        firebaseAuth.signOut();
+                        finish();
+                        startActivity(new Intent(RegisterActivity.this,LoginAcitivty.class));
+                    }else{
+                        message("Warning","Opps!, Varification Mail Not Sent.");
+                    }
+                }
+            });
+        }
+    }
 
     public void loginPage(View v){
         startActivity(new Intent(RegisterActivity.this,LoginAcitivty.class));
@@ -92,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                
+
             }
         });
         builder.create().show();
