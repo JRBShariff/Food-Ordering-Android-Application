@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginAcitivty extends AppCompatActivity {
     EditText email,pass;
-    FirebaseAuth firebaseAuth;
+    private FirebaseAuth firebaseAuth;
     ProgressDialog dialog;
     Button btn;
 
@@ -44,9 +44,14 @@ public class LoginAcitivty extends AppCompatActivity {
         FirebaseUser user= firebaseAuth.getCurrentUser();
         if(user!=null){
             finish();
-            startActivity(new Intent(LoginAcitivty.this,HomeActivity.class));
-        }
+            String e_mail = user.getEmail();
+            if(e_mail.equals("shariffassaa08@gmail.com")){
+                startActivity(new Intent(LoginAcitivty.this,AdminHome.class));
 
+            }else{
+                startActivity(new Intent(LoginAcitivty.this,HomeActivity.class));
+            }
+        }
     }
 
     public void login(View v){
@@ -98,12 +103,18 @@ public class LoginAcitivty extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         Boolean emailflag=firebaseUser.isEmailVerified();
         if(emailflag){
+            String e_mail=firebaseUser.getEmail();
             finish();
-            startActivity(new Intent(LoginAcitivty.this,HomeActivity.class));
+            if(e_mail.equals("shariffassaa08@gmail.com")){
+                startActivity(new Intent(LoginAcitivty.this,AdminHome.class));
+            }else{
+                startActivity(new Intent(LoginAcitivty.this,HomeActivity.class));
+            }
         }else{
            message("Info","Please Varify your Email");
            firebaseAuth.signOut();
         }
     }
+
 
 }

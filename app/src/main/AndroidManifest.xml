@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shariff.mealsordering">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MealsOrdering">
-        <activity android:name=".PasswordActivity"></activity>
+        <activity android:name=".ViewMyOrder"
+            android:parentActivityName=".HomeActivity"
+            ></activity>
+
+        <activity android:name=".BookingActivity" />
+        <activity
+            android:name=".ViewFoodActivity"
+            android:parentActivityName=".AdminHome" />
+
+        <activity android:name=".AddFoodActivity" />
+        <activity android:name=".AdminHome" />
+        <activity android:name=".ViewProductAcivity" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".HomeActivity" />
+
+        <activity
+            android:name=".FoodListActivity"
+            android:label="@string/title_activity_food_list"
+            android:theme="@style/Theme.MealsOrdering.NoActionBar" />
+        <activity
+            android:name=".ListFoodActivity"
+            android:label="@string/title_activity_list_food"
+            android:theme="@style/Theme.MealsOrdering.NoActionBar" />
+        <activity
+            android:name=".FoodActivity"
+            android:label="@string/title_activity_food"
+            android:theme="@style/Theme.MealsOrdering.NoActionBar" />
+        <activity android:name=".PasswordActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginAcitivty" />
         <activity

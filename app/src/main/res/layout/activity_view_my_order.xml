@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="8dp"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ViewMyOrder">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -66,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="FOODS THAT  "
+                    android:text="MY   "
                     android:textColor="#fd8201"
                     android:textSize="17sp"
                     android:textStyle="bold">
@@ -76,7 +75,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" AVAILABLE TODAYS "
+                    android:text=" ORDER"
                     android:textSize="17sp"></TextView>
             </LinearLayout>
 
@@ -89,9 +88,10 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewCustomer"
+            android:id="@+id/order_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+           />
 
 
     </LinearLayout>

@@ -1,11 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<menu
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto" >
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/nav_logout"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        android:icon="@drawable/ic_search"
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="android.widget.SearchView"/>
+        android:icon="@drawable/ic_power"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+<item
+    android:id="@+id/action_cart"
+    android:icon="@drawable/ic_shop"
+    android:title="Cart"
+    app:actionLayout="@layout/custom_action_item_layout"
+    app:showAsAction="always"/>
+
 </menu>
