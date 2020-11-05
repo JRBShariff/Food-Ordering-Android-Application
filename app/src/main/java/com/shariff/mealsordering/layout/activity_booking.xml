@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
         android:shadowColor="#FFFFFF"
-        android:text="Booking Information"
+        android:text="Order Information"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,13 +86,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Button
         android:id="@+id/btn_book"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
         android:layout_marginTop="460dp"
-        android:background="@drawable/rounded_border"
-        android:text="Book Now"
+        app:icon="@drawable/ic_baseline_save_24"
+        app:iconGravity="textStart"
+        android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
